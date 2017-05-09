@@ -35,16 +35,19 @@
             this.btnLoadSecondStageMacro = new System.Windows.Forms.Button();
             this.btnLoadFirstStageMacro = new System.Windows.Forms.Button();
             this.chkAutoGenerateFirstStageMacro = new System.Windows.Forms.CheckBox();
-            this.fldMacroContent = new System.Windows.Forms.TextBox();
             this.tblCriterions = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsFirstStage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chkDisplayFirstStageMacro = new System.Windows.Forms.CheckBox();
+            this.tblParsedParameters = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCriterions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblParsedParameters)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -59,9 +62,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tblParsedParameters);
             this.tabPage1.Controls.Add(this.chkDisplayFirstStageMacro);
             this.tabPage1.Controls.Add(this.tblCriterions);
-            this.tabPage1.Controls.Add(this.fldMacroContent);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -121,14 +124,6 @@
             this.chkAutoGenerateFirstStageMacro.Text = "Автоматически генерировать расчет 1 этапа";
             this.chkAutoGenerateFirstStageMacro.UseVisualStyleBackColor = true;
             // 
-            // fldMacroContent
-            // 
-            this.fldMacroContent.Location = new System.Drawing.Point(290, 36);
-            this.fldMacroContent.Multiline = true;
-            this.fldMacroContent.Name = "fldMacroContent";
-            this.fldMacroContent.Size = new System.Drawing.Size(466, 366);
-            this.fldMacroContent.TabIndex = 1;
-            // 
             // tblCriterions
             // 
             this.tblCriterions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,6 +164,28 @@
             this.chkDisplayFirstStageMacro.Text = "Отображать расчет первого этапа";
             this.chkDisplayFirstStageMacro.UseVisualStyleBackColor = true;
             // 
+            // tblParsedParameters
+            // 
+            this.tblParsedParameters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblParsedParameters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.tblParsedParameters.Location = new System.Drawing.Point(290, 46);
+            this.tblParsedParameters.Name = "tblParsedParameters";
+            this.tblParsedParameters.Size = new System.Drawing.Size(443, 356);
+            this.tblParsedParameters.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Имя критерия";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Определяющее критерий выражение";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 300;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +200,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblCriterions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblParsedParameters)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -196,12 +214,14 @@
         private System.Windows.Forms.Button btnLoadSecondStageMacro;
         private System.Windows.Forms.Button btnLoadFirstStageMacro;
         private System.Windows.Forms.CheckBox chkAutoGenerateFirstStageMacro;
-        private System.Windows.Forms.TextBox fldMacroContent;
         private System.Windows.Forms.DataGridView tblCriterions;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsMax;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsFirstStage;
         private System.Windows.Forms.CheckBox chkDisplayFirstStageMacro;
+        private System.Windows.Forms.DataGridView tblParsedParameters;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
 
